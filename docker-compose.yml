@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  gccbuild:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    volumes:
+      - "/Users/johnmairs/Documents/gccTesting:/opt"
+    privileged: true
+    # The first corresponds to -i in docker run and the second to -t.
+    stdin_open: true
+    tty: true
